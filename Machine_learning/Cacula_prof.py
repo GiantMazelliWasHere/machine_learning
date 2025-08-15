@@ -7,7 +7,7 @@ def calcula(x, y):
     y = np.array(y)
     x_bar = np.mean(x)
     y_bar = np.mean(y)
-    m = np.dot(x - x_bar, y - y_bar) / np.dot((x - x_bar, x - x_bar))
+    m = np.dot(x - x_bar, y - y_bar) / np.dot(x - x_bar, x - x_bar)
     print(m)
     b = y_bar - m * x_bar
     print(b)
@@ -19,4 +19,5 @@ data = pd.read_excel("data.xlsx")
 
 print(data)
 x, y = data['x'], data['y']
+
 calcula(x, y)
